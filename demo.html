@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="https://bc8uqxmos9.execute-api.ap-southeast-2.amazonaws.com/test/meme">
+  <img src = "https://s3.ap-southeast-2.amazonaws.com/www.memegenerator.com/meme.png" alt = "Test Image" border = "3"/>
+  <br><br>
+  <label for="inFile">Choose a meme template:</label>
+  <select name="inFile" id="inFile">
+    <optgroup label="Funny">
+      <option value="https://imgflip.com/s/meme/Disaster-Girl.jpg">Disaster Girl</option>
+      <option value="https://imgflip.com/s/meme/Ancient-Aliens.jpg">Ancient Aliens</option>
+    </optgroup>
+    <optgroup label="Pizza">
+      <option value="https://i.imgflip.com/ed42m.jpg">Pizza Pepperoni</option>
+      <option value="https://i.imgflip.com/qt8f1.jpg">Pizza Dog</option>
+    </optgroup>
+  </select>
+  <br><br>
+  <label for="bottomText">Meme Text:</label>
+  <input type="text" id="bottomText" name="bottomText" value="Let's make memes!">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+ 
+</body>
+</html>
