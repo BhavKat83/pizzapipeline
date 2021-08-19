@@ -4,9 +4,6 @@ Resources:
       Type: AWS::Lambda::Function
       Properties:
         Name: "generateMeme"
-        Alias: "generateMeme"
+        Alias: "generateMemeAlias"
         CurrentVersion: "1"
-        TargetVersion: "2"
-Hooks:
-  - BeforeAllowTraffic: "LambdaFunctionToValidateBeforeTrafficShift"
-  - AfterAllowTraffic: "LambdaFunctionToValidateAfterTrafficShift"
+        TargetVersion: "1"
