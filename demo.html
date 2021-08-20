@@ -1,24 +1,183 @@
 <!DOCTYPE html>
 <html>
-<body>
-
-<form action="https://bc8uqxmos9.execute-api.ap-southeast-2.amazonaws.com/test/meme">
-  <img src = "https://s3.ap-southeast-2.amazonaws.com/www.memegenerator.com/meme.png" alt = "Test Image" border = "3"/>
-  <br><br>
-  <label for="inFile">Choose a meme template:</label>
-  <select name="inFile" id="inFile">
-    <optgroup label="Pizza">
-      <option value="https://i.imgflip.com/ed42m.jpg">Pizza Pepperoni</option>
-      <option value="https://i.imgflip.com/qt8f1.jpg">Pizza Dog</option>
-      <option value="https://i.imgflip.com/77km4.jpg">Pizza Cat</option>
-    </optgroup>
-  </select>
-  <br><br>
-  <label for="bottomText">Meme Text:</label>
-  <input type="text" id="bottomText" name="bottomText" value="Let's make memes!">
-  <br><br>
-  <input type="submit" value="Submit">
-</form>
- 
-</body>
+  <head>
+    <title>ANZ GoGirlGoForIT DevOps Demo</title>
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 16px;
+      color: #eee;
+      }
+      body {
+      background: url("https://s3.ap-southeast-2.amazonaws.com/www.memegenerator.com/gogirl.png") no-repeat center;
+      background-size: cover;
+      background-attachment: scroll;
+      }
+      h1, h2 {
+      text-transform: uppercase;
+      font-weight: 400;
+      color:rgb(51, 194, 245);
+      font-family: garamond;
+      }
+      h2 {
+      margin: 0 0 0 8px;
+      }
+      .main-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.5); 
+      }
+      .left-part, form {
+      padding: 25px;
+      }
+      .left-part {
+      text-align: center;
+      }
+      .fa-graduation-cap {
+      font-size: 72px;
+      }
+      form {
+      background: rgba(0, 0, 0, 0.7); 
+      }
+      .title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      }
+      .info {
+      display: flex;
+      flex-direction: column;
+      }
+      input, select {
+      padding: 5px;
+      margin-bottom: 30px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #eee;
+      }
+      input::placeholder {
+      color: #eee;
+      }
+      option:focus {
+      border: none;
+      }
+      option {
+      background: black; 
+      border: none;
+      }
+      .checkbox input {
+      margin: 0 10px 0 0;
+      vertical-align: middle;
+      }
+      .checkbox a {
+      color: #26a9e0;
+      }
+      .checkbox a:hover {
+      color: #85d6de;
+      }
+      .btn-item, button {
+      padding: 10px 5px;
+      margin-top: 20px;
+      border-radius: 5px; 
+      border: none;
+      background: #26a9e0; 
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      color: #fff;
+      }
+      .btn-item {
+      display: inline-block;
+      margin: 20px 5px 0;
+      }
+      button {
+      width: 100%;
+      }
+      button:hover, .btn-item:hover {
+      background: #85d6de;
+      }
+      @media (min-width: 568px) {
+      html, body {
+      height: 100%;
+      }
+      .main-block {
+      flex-direction: row;
+      height: calc(100% - 50px);
+      }
+      .left-part, form {
+      flex: 1;
+      height: auto;
+      }
+      }
+      .blink {
+        animation: blinker 0.6s linear infinite;
+        color: #1c87c9;
+        font-size: 25px;
+        font-family: garamond;
+      }
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+      }
+      .blink-one {
+        animation: blinker-one 1s linear infinite;
+      }
+      @keyframes blinker-one {
+        0% {
+          opacity: 0;
+        }
+      }
+      .blink-two {
+        animation: blinker-two 3s linear infinite;
+      }
+      @keyframes blinker-two {
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-block">
+      <div class="left-part">
+        <i class="fas fa-graduation-cap"></i>
+        <h1>Meme Generator</h1>
+        <p>Let's generate some fun pizza themed memes using the power of DevOps Pipelines!</p>
+        <div class="btn-group">
+          <a class="btn-item" href="https://www.youtube.com/watch?v=_I94-tJlovg">What is DevOps?</a>
+          <a class="btn-item" href="https://www.atlassian.com/devops/devops-tools/devops-pipeline">What are Pipelines?</a>
+        </div>
+      </div>
+      <form action="https://bc8uqxmos9.execute-api.ap-southeast-2.amazonaws.com/test/meme">
+        <div class="title">
+          <i class="fas fa-pencil-alt"></i> 
+          <h2 class="blink-one">Let's make some memes!!</h2>
+        </div>
+        <div class="info">
+        </br></br>
+          <p style="color:rgb(255, 255, 47)">Enter meme text:</p></br>
+          <input type="text" name="bottomText" maxlength="50" placeholder=""></br></br>
+          <p style="color:rgb(255, 255, 47)">Choose meme template:</p></br>
+          <select name="inFile" id="inFile">
+            <option value="https://i.imgflip.com/ed42m.jpg">Pizza Pepperoni</option>
+            <option value="https://i.imgflip.com/qt8f1.jpg">Pizza Dog</option>
+            <option value="https://i.imgflip.com/77km4.jpg">Pizza Cat</option>
+          </select>
+        </div>
+        </br></br>
+        <button type="submit" href="/">Submit</button>
+      </form>
+    </div>
+  </body>
 </html>
