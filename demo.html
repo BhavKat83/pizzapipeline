@@ -6,23 +6,22 @@
       html, body {
       min-height: 100%;
       }
-      body, div, form, input, select, p { 
+      body, div, input, select, p { 
       padding: 0;
       margin: 0;
       outline: none;
-      font-family: Roboto, Arial, sans-serif;
-      font-size: 16px;
+      font-family: garamond;
+      font-size: 20px;
       color: #eee;
       }
       body {
-      background: url("https://s3.ap-southeast-2.amazonaws.com/www.memegenerator.com/gogirl.png") no-repeat center;
+      background: url("https://s3.ap-southeast-2.amazonaws.com/www.memegenerator.com/gogirl-background.png") no-repeat center;
       background-size: cover;
-      background-attachment: scroll;
       }
       h1, h2 {
       text-transform: uppercase;
       font-weight: 400;
-      color:rgb(51, 194, 245);
+      color:rgb(70, 171, 208);
       font-family: garamond;
       }
       h2 {
@@ -37,8 +36,9 @@
       padding: 25px;
       background: rgba(0, 0, 0, 0.5); 
       }
-      .left-part, form {
-      padding: 25px;
+      .left-part {
+      padding: 500px;
+      margin-left: 8;
       }
       .left-part {
       text-align: center;
@@ -48,22 +48,33 @@
       }
       form {
       background: rgba(0, 0, 0, 0.7); 
+      text-align: center;
+      align-items: center;
+      margin-left: 10%;
+      margin-right: 10%;
+      padding-top: 40px;
+      padding-bottom: 10px;
+      align-content: center;
       }
       .title {
       display: flex;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 2px;
       }
       .info {
       display: flex;
       flex-direction: column;
       }
       input, select {
-      padding: 5px;
+      padding: 6px;
+      width: 250px;
+      align-self: center;
       margin-bottom: 30px;
-      background: transparent;
       border: none;
+      background: transparent;
       border-bottom: 1px solid #eee;
+      align-content: center;
+      text-align: center;
       }
       input::placeholder {
       color: #eee;
@@ -101,14 +112,14 @@
       margin: 20px 5px 0;
       }
       button {
-      width: 100%;
+      width: 40%;
       }
       button:hover, .btn-item:hover {
-      background: #85d6de;
+      background: #449ed5;
       }
       @media (min-width: 568px) {
       html, body {
-      height: 100%;
+      height: 50%;
       }
       .main-block {
       flex-direction: row;
@@ -149,34 +160,26 @@
     </style>
   </head>
   <body>
-    <div class="main-block">
-      <div class="left-part">
-        <i class="fas fa-graduation-cap"></i>
-        <h1>Meme Generator</h1>
-        <p>Let's generate some fun pizza themed memes using the power of DevOps Pipelines!</p>
-        <div class="btn-group">
-          <a class="btn-item" href="https://www.youtube.com/watch?v=_I94-tJlovg">What is DevOps?</a>
-          <a class="btn-item" href="https://www.atlassian.com/devops/devops-tools/devops-pipeline">What are Pipelines?</a>
-        </div>
+    <div>
+      <div></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
       </div>
       <form action="https://bc8uqxmos9.execute-api.ap-southeast-2.amazonaws.com/test/meme">
-        <div class="title">
-          <i class="fas fa-pencil-alt"></i> 
-          <h2 class="blink-one">Let's make some memes!!</h2>
+        <div>
+          <h2>Meme Generator</h2>
         </div>
         <div class="info">
         </br></br>
-          <p style="color:rgb(255, 255, 47)">Enter meme text:</p></br>
-          <input type="text" name="bottomText" maxlength="50" placeholder=""></br></br>
-          <p style="color:rgb(255, 255, 47)">Choose meme template:</p></br>
+          <p style="color:rgb(232, 232, 40)">Enter meme text:</p>
+          <input type="text" name="bottomText" maxlength="50" value="Let's make memes!...."></br>
+          <p style="color:rgb(232, 232, 40)">Choose meme template:</p>
           <select name="inFile" id="inFile">
-            <option value="https://i.imgflip.com/ed42m.jpg">Pizza Pepperoni</option>
-            <option value="https://i.imgflip.com/qt8f1.jpg">Pizza Dog</option>
-            <option value="https://i.imgflip.com/77km4.jpg">Pizza Cat</option>
+            <option value="https://i.imgflip.com/ed42m.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pizza Pepperoni</option>
+            <option value="https://i.imgflip.com/qt8f1.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pizza Dog</option>
+            <option value="https://i.imgflip.com/77km4.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pizza Cat</option>
           </select>
         </div>
-        </br></br>
-        <button type="submit" href="/">Submit</button>
+        <button type="submit" href="/">Generate Meme</button></br></br>
+        <a href="https://s3.ap-southeast-2.amazonaws.com/www.memegenerator.com/badge.html">Resources</a>
       </form>
     </div>
   </body>
