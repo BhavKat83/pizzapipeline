@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ANZ GoGirlGoForIT DevOps Demo</title>
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, input, select, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 16px;
+      color: #eee;
+      }
+      body {
+      background: url("https://s3.ap-southeast-2.amazonaws.com/www.memegenerator.com/gogirl-background.png") no-repeat center;
+      background-size: auto;
+      background-attachment: scroll;
+      }
+      h1, h2 {
+      font-weight: 100;
+      color:rgb(71, 191, 218);
+      font-family: garamond;
+      }
+      h2 {
+      margin: 0 0 0 8px;
+      }
+      .main-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.5); 
+      }
+      .left-part {
+      padding: 190px;
+      }
+      .left-part {
+      text-align: center;
+      }
+      .fa-graduation-cap {
+      font-size: 100px;
+      }
+      form {
+      background: rgba(0, 0, 0, 0.7); 
+      text-align: center;
+      align-items: center;
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-top: 200px;
+      padding-top: 40px;
+      padding-bottom: 10px;
+      align-content: center;
+      }
+      .title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      }
+      .info {
+      display: flex;
+      flex-direction: column;
+      }
+      input, select {
+      padding: 5px;
+      margin-bottom: 30px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #eee;
+      }
+      input::placeholder {
+      color: #eee;
+      }
+      option:focus {
+      border: none;
+      }
+      option {
+      background: black; 
+      border: none;
+      }
+      .checkbox input {
+      margin: 0 10px 0 0;
+      vertical-align: middle;
+      }
+      .checkbox a {
+      color: #26a9e0;
+      }
+      .checkbox a:hover {
+      color: #85d6de;
+      }
+      .btn-item, button {
+      padding: 10px 5px;
+      margin-top: 20px;
+      border-radius: 5px; 
+      border: none;
+      background: #26a9e0; 
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      color: #fff;
+      }
+      .btn-item {
+      display: inline-block;
+      margin: 20px 5px 0;
+      }
+      button {
+      width: 40%;
+      }
+      button:hover, .btn-item:hover {
+      background: #85d6de;
+      }
+      @media (min-width: 568px) {
+      html, body {
+      height: 100%;
+      }
+      .main-block {
+      flex-direction: row;
+      height: calc(100% - 50px);
+      }
+      .left-part {
+      flex: 1;
+      height: auto;
+      }
+      }
+      .blink {
+        animation: blinker 0.6s linear infinite;
+        color: #1c87c9;
+        font-size: 25px;
+        font-family: garamond;
+      }
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+      }
+      .blink-one {
+        animation: blinker-one 1s linear infinite;
+      }
+      @keyframes blinker-one {
+        0% {
+          opacity: 0;
+        }
+      }
+      .blink-two {
+        animation: blinker-two 3s linear infinite;
+      }
+      @keyframes blinker-two {
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="left-part">
+      <form action="https://ils5ffg9o7.execute-api.ap-southeast-2.amazonaws.com/test/meme">
+        <h1>Congratulations on completing the GoGirl DevOps workshop!</h1></br>
+          <h2 style="color:rgb(233, 232, 235)">Enter your name:</h2></br>
+          <input type="text" name="bottomText" maxlength="40" placeholder="">
+          <input type="hidden" name="inFile" value="https://s3.ap-southeast-2.amazonaws.com/www.memegenerator.com/stickerTemplate.jpg">
+          </br>
+          <button type="submit" href="/">Generate Badge</button>
+      </form>
+    </div>
+  </body>
+</html>
