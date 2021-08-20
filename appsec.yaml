@@ -6,4 +6,4 @@ Resources:
         Name: "generateMeme"
         Alias: "generateMemeAlias"
         CurrentVersion: "1"
-        TargetVersion: "1"
+        TargetVersion: "2"
