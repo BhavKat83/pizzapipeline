@@ -3,7 +3,7 @@
 
 ## Introduction
 
-This repository has the code for a simple AWS Lamda based meme generator in golang.
+This repository has the code for a  AWS Lamda based meme generator in golang.
 
 The repository is integrated with AWS CodePipeline that can compile and deploy it to the designated function.
 
